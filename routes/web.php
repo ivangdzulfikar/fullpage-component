@@ -1,5 +1,7 @@
 <?php
 
+use App\Livewire\Home;
+use App\Livewire\UserPages;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -13,6 +15,6 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
-});
+Route::get('/', Home::class);
+Route::get('/users/{user}', UserPages::class);
+
